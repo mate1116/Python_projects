@@ -60,8 +60,11 @@ class Search:
                          
         return fil
 
-root=r'C:\Users\Benutzer_1\OneDrive\Dokumentumok\TUG\Prozessmanagement\VO_Unterlagen_20200512'
-os.chdir(root)
 
-e=Search("processflow",root,overwrite=True)
-a=e.find()
+
+
+if __name__=="__main__":
+    root=os.getcwd()
+    os.chdir(root)
+    e=Search("Severin",root,overwrite=True)
+    a=e.find()
