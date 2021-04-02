@@ -70,5 +70,5 @@ if __name__=="__main__":
     word = str(input("Please enter keyword: "))
     YN = str(input("Do you want to overwrite the files? [Y/N] "))
     boo = True if YN=="Y" else False if YN=="N" else sys.exit("Only Y and N are acceptable answers!") 
-    e=Search(word,root,overwrite=True)
+    e=Search(word,root,overwrite=boo)
     a=e.find()
