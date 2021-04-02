@@ -3,6 +3,7 @@ import os
 import shutil
 from os import listdir
 from os.path import isfile, join
+import sys
 
 
 class Search:
@@ -66,5 +67,8 @@ class Search:
 if __name__=="__main__":
     root=os.getcwd()
     os.chdir(root)
-    e=Search("Severin",root,overwrite=True)
+    word = str(input("Please enter keyword: "))
+    YN = str(input("Do you want to overwrite the files? [Y/N] "))
+    boo = True if YN=="Y" else False if YN=="N" else sys.exit("Only Y and N are acceptable answers!") 
+    e=Search(word,root,overwrite=True)
     a=e.find()
